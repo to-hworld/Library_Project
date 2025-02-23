@@ -1,0 +1,55 @@
+*로그인 후 header 변경은 jsp로 처리
+sql문서 슬라이드 1개씩 미룰 것
+13, 15 슬라이드 변경에 의한 sql문서 변경할 것
+
+슬라이드1
+슬라이드5는 자바스크립트로 header 변경
+front
+
+슬라이드3
+login
+
+슬라이드 7
+signUp
+
+슬라이드 9
+searchBook
+
+슬라이드 11
+afterSearchBook
+
+슬라이드 13
+clickBook
+
+슬라이드 15
+clickInterLibrary
+
+슬라이드 17
+clickReqBook
+
+슬라이드 19
+board
+
+슬라이드 21
+enquire
+
+슬라이드 23
+myBoard
+
+슬라이드 25
+enquiryWithoutReply
+
+슬라이드 27
+enquiryWithReply
+
+슬라이드 29
+introduction
+
+슬라이드 31
+myLibrary
+
+슬라이드 33
+clickUpdate
+
+슬라이드 35
+updateMyInfo
