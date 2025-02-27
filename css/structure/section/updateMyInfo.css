@@ -1,0 +1,12 @@
+section {
+    border: 1px black solid;
+}
+section * {
+    border: 1px black solid;
+}
+section > form > div {
+    justify-self: center;
+}
+section > form > div:nth-child(2) > input {
+    background-color: burlywood;
+}

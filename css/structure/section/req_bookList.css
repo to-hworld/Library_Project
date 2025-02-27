@@ -1,0 +1,24 @@
+section {
+    border: 1px black solid;
+}
+
+section * {
+    border: 1px black solid;
+}
+
+section > form {
+    justify-self: center;
+
+}
+
+section > form > table {
+    border-collapse: collapse;
+}
+
+section > form:nth-child(1) {
+    padding-bottom: 2%;
+}
+
+section > form input[type="submit"] {
+    background-color: burlywood;
+}

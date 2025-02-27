@@ -1,0 +1,24 @@
+section {
+    display: grid;
+    justify-content: center;
+    border: 1px black solid;
+}
+section * {
+    border: 1px black solid;
+}
+
+section > form {
+    width: auto;
+    height: auto;
+}
+section > form > div > label {
+    display: block;
+}
+
+section > form > input[type="submit"] {
+    display: block;
+    justify-self: end;
+    background-color: burlywood;
+    font-size: 1em;
+    width: 40%;
+}

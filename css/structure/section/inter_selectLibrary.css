@@ -1,0 +1,17 @@
+section * {
+    border: 1px black solid;
+}
+section > form {
+    justify-self: center;
+    width: auto;
+    height: auto;
+}
+section > form div {
+    justify-self: center;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+section > form div > input{
+    background-color: burlywood;
+}

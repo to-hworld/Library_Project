@@ -1,0 +1,19 @@
+section {
+    border: 1px black solid;
+}
+section * {
+    border: 1px black solid;
+}
+section > div {
+    justify-self: center;
+}
+section > div > table {
+    border-collapse: collapse;
+}
+section > div > table:nth-child(1) {
+    margin-bottom: 10px;
+}
+section > div > table:nth-child(2) > tbody td:nth-child(5) > form >input {
+    width: 100%;
+    background-color: burlywood;
+}
