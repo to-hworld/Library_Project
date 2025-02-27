@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Library</title>
+    <link rel="stylesheet" href="../css/structure/header/header.css">
+    <link rel="stylesheet" href="../css/structure/section/myLibrary.css">
+</head>
+<body>
+    <header>
+        <menu>
+            <li><a href="./front.html">홈</a></li>
+            <li><a href="">정보수정</a></li>
+        </menu>
+    </header>
+    <section>
+        <nav>
+            <menu>
+                <!-- ajax로 밑에 table만 변경할 것 -->
+                <li><a href="">대출현황</a></li>
+                <li><a href="">예약현황</a></li>
+                <li><a href="">관심도서</a></li>
+                <li><a href="">희망도서</a></li>
+            </menu>
+        </nav>
+        <table>
+            <!-- 대출현황 버튼 -->
+            <caption>대출현황</caption>
+            <tr>
+                <th scope="col">번호</th>
+                <th scope="col">도서명</th>
+                <th scope="col">대출일</th>
+                <th scope="col">반납일</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+            </tr>
+        </table>
+        <table>
+            <!-- 예약현황 -->
+            <caption>예약현황</caption>
+            <tr>
+                <th scope="col">번호</th>
+                <th scope="col">도서명</th>
+                <th colspan="2" scope="col">신청일</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td colspan="2"></td>
+            </tr>
+        </table>
+        <table>
+            <!-- 관심도서 -->
+            <caption>관심도서</caption>
+            <tr>
+                <th scope="col">번호</th>
+                <th colspan="3" scope="col">도서명</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td colspan="2">2</td>
+                <!-- restful로 delete 전송하고, ajax로 table 새로 받아 변경할 것 -->
+                <td><button>삭제</button></td>
+            </tr>
+        </table>
+        <table>
+            <!-- 희망도서 -->
+            <caption>희망도서</caption>
+            <tr>
+                <th scope="col">번호</th>
+                <th scope="col">도서명</th>
+                <th colspan="2" scope="col">신청일</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td colspan="2">3</td>
+            </tr>
+        </table>
+    </section>
+</body>
+</html>

@@ -1,0 +1,8 @@
+section * {
+    border: 1px black solid;
+}
+
+section > nav > menu > li {
+    list-style-type: none;
+    display: inline-block;
+}

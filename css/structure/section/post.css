@@ -1,0 +1,21 @@
+section {
+    border: 1px black solid;
+}
+section * {
+    border: 1px black solid;
+}
+section > form {
+    justify-self: center;
+}
+section > form * {
+    padding: 0%;
+}
+section > form > div {
+    justify-self: center;
+}
+section > form > div input {
+    background-color: burlywood;
+}
+section > form > table {
+    border-collapse: collapse;
+}

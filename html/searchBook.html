@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Book</title>
+    <link rel="stylesheet" href="../css/structure/header/header.css">
+    <link rel="stylesheet" href="../css/structure/section/search.css">
+</head>
+<body>
+    <header>
+        <menu>
+            <li><a href="./front.html">홈</a></li>
+            <li><a href="">정보수정</a></li>
+        </menu>
+    </header>
+    <section>
+        <search>
+            <div>
+                <form action="" method="get">
+                    <select name="" id="">
+                        <option value="title">도서명</option>
+                        <option value="author">저자</option>
+                    </select>
+                    <input type="search">
+                    <input type="submit" value="검색">
+                    <fieldset>
+                        <legend>도서관 선택</legend>
+                        <label><input type="radio" value="all" name="search_library" checked>전체 도서관</label>
+                        <label><input type="radio" value="A" name="search_library">A 도서관</label>
+                        <label><input type="radio" value="B" name="search_library">B 도서관</label>
+                        <label><input type="radio" value="C" name="search_library">C 도서관</label>
+                    </fieldset>
+                </form>
+            </div>
+        </search>
+    </section>
+</body>
+</html>
