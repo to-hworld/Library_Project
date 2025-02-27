@@ -4,18 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Update My Information</title>
+    <link rel="stylesheet" href="../css/structure/header/header.css">
+    <link rel="stylesheet" href="../css/structure/section/updateMyInfo.css">
 </head>
 <body>
     <header>
         <menu>
-            <ul>
-                <li><a href="./front.html">홈</a></li>
-                <li><a href="">정보수정</a></li>
-            </ul>
+            <li><a href="./front.html">홈</a></li>
+            <li><a href="">정보수정</a></li>
         </menu>
     </header>
     <section>
-        <div>
+        <form action="./front.html" method="post">
             <div>
                 <label>성명<input type="text" readonly></label><br>
                 <label>아이디<input type="text" readonly></label><br>
@@ -24,11 +24,11 @@
                 <label>이메일<input type="text"></label><br>
                 <label>가입 도서관<input type="text" readonly></label>
             </div>
-        </div>
-        <div>
-            <form action="" method=""><input type="submit" value="수정"></form>
-            <a href="./front.html"><button>취소</button></a>
-        </div>
+            <div>
+                <input type="submit" value="수정">
+                <a href="./front.html">취소</a>
+            </div>
+        </form>
     </section>
 </body>
 </html>

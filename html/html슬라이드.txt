@@ -48,7 +48,7 @@ introduction
 슬라이드 31
 myLibrary
 
-슬라이드 33
+슬라이드 33  // checkPass로 이름 변경 예정
 clickUpdate
 
 슬라이드 35

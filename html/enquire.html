@@ -4,21 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Enquire</title>
+    <link rel="stylesheet" href="../css/structure/header/header.css">
+    <link rel="stylesheet" href="../css/structure/section/post.css">
 </head>
 <body>
     <header>
         <menu>
-            <ul>
-                <li><a href="./front.html">홈</a></li>
-                <li><a href="">정보수정</a></li>
-            </ul>
+            <li><a href="./front.html">홈</a></li>
+            <li><a href="">정보수정</a></li>
         </menu>
     </header>
     <section>
         <form action="" method="post">
             <table>
                 <tr>
-                    <td colspan="3"><label>제목<input type="text"></label></td>
+                    <td colspan="3"><label id="aa">제목<input type="text"></label></td>
                 </tr>
                 <tr>
                     <td><label>작성일<input type="text" readonly></label></td>
@@ -32,8 +32,10 @@
                     <td colspan="3"><input type="file" value="파일업로드"></td>
                 </tr>
             </table>
-            <input type="submit" value="작성">
-            <a href=""><button>취소</button></a>
+            <div>
+                <input type="submit" value="작성">
+                <a href="">취소</a>
+            </div>
         </form>
     </section>
 </body>

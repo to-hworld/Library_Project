@@ -4,23 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Introduction</title>
+    <link rel="stylesheet" href="../css/structure/header/header.css">
+    <link rel="stylesheet" href="../css/structure/section/intro.css">
 </head>
 <body>
     <header>
         <menu>
-            <ul>
-                <li><a href="./front.html">홈</a></li>
-                <li><a href="">정보수정</a></li>
-            </ul>
+            <li><a href="./front.html">홈</a></li>
+            <li><a href="">정보수정</a></li>
         </menu>
     </header>
     <section>
         <nav>
-            <ul>
-                <li><button>A 도서관</button></li>
-                <li><button>B 도서관</button></li>
-                <li><button>C 도서관</button></li>
-            </ul>
+            <menu>
+                <!-- ajax로 밑에 table태그만 변경할 것 -->
+                <li><a href="">A 도서관</a></li>
+                <li><a href="">B 도서관</a></li>
+                <li><a href="">C 도서관</a></li>
+            </menu>
         </nav>
         <table>
             <tr>
@@ -32,21 +33,24 @@
             </tr>
             <tr><td colspan="3"><label>시설<input type="text" readonly></label></td></tr>
             <tr><td colspan="3"><label>자료현황<input type="text" readonly></label></td></tr>
-            <tr><th colspan="3"><label>이용시간<input type="text" readonly></label></th></tr>
+            
+        </table>
+        <table>
+            <caption>이용시간</caption>
             <tr>
-                <th>시설명</th>
-                <th>평일</th>
-                <th>토/일요일</th>
+                <th scope="col">시설명</th>
+                <th scope="col">평일</th>
+                <th scope="col">토/일요일</th>
             </tr>
             <tr>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
             </tr>
             <tr>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
             </tr>
         </table>
     </section>
