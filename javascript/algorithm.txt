@@ -1,0 +1,10 @@
+*공통
+1. <header>
+홈 버튼 클릭 --> xmlHttpRequest로 front/main url로 요청 전송 --> front.html 페이지 반환
+1-1 css 변경
+original 문서의 link 요소 추출 --> for문으로 href 속성에 section 포함하는지 확인 --> true시, xhr 응답 front.html에서 link 요소 추출 
+--> 다음 for문으로 href 속성에 section 포함하는지 확인 --> true시, origianl 문서의 head 요소 자식 link요소 변경
+1-2 section 태그 변경
+original 문서의 section 요소 제거 --> xhr로 front.html에서 section 요소만 추출 --> original 문서의 body 요소의 header 다음 자식으로 section 추가
+
+11 슬라이드
