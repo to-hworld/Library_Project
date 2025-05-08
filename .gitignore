@@ -25,3 +25,10 @@ replay_pid*
 
 # folder
 .metadata
+Servers
+.settings
+springProject.library-imp/target
+
+# file
+.classpath
+.project
