@@ -32,3 +32,5 @@ springProject.library-imp/target
 # file
 .classpath
 .project
+springProject.library/.gitignore
+springProject.library/src/main/webapp/WEB-INF/springConf/dataSourceConf.xml

@@ -1,0 +1,40 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="jakarta.tags.core" %>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Book</title>
+    <link rel="stylesheet" href="<c:url value="/rs/css/structure/header/header.css" />">
+    <link rel="stylesheet" href="<c:url value="/rs/css/structure/section/search.css" />">
+</head>
+<body>
+    <header>
+        <ul>
+            <li><a href="./front.html">홈</a></li>
+            <li><form action="" method="get"><input type="submit" value="정보수정"></form></li>
+        </ul>
+    </header>
+    <section>
+        <div>
+        
+            <form action="<c:url value="/searching" />" method="get">
+                <select name="searchOption" id="">
+                    <option value="title">도서명</option>
+                    <option value="author">저자</option>
+                </select>
+                <input type="search" name="searchValue">
+                <input type="submit" value="검색">
+                <fieldset>
+                    <legend>도서관 선택</legend>
+                    <label><input type="radio" value="all" name="search_library" checked>전체 도서관</label>
+                    <label><input type="radio" value="A" name="search_library">A 도서관</label>
+                    <label><input type="radio" value="B" name="search_library">B 도서관</label>
+                    <label><input type="radio" value="C" name="search_library">C 도서관</label>
+                </fieldset>
+            </form>
+        </div>
+    </section>
+</body>
+</html>

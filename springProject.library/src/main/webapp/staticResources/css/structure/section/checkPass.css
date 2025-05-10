@@ -1,0 +1,19 @@
+section {
+    border: 1px black solid;
+}
+section * {
+    border: 1px black solid;
+}
+section > input {
+    display: block;
+    justify-self: center;
+}
+section > form {
+    justify-self: center;
+}
+section > form > table {
+    border-collapse: collapse;
+}
+section > form > table input[type="submit"] {
+    background-color: burlywood;
+}

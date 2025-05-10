@@ -1,0 +1,18 @@
+section {
+    border: 1px black solid;
+}
+section * {
+    border: 1px black solid;
+    padding: 0%;
+}
+section > table {
+    justify-self: center;
+}
+    
+section > div {
+    justify-self: center;
+}
+
+section > table {
+    border-collapse: collapse;
+}

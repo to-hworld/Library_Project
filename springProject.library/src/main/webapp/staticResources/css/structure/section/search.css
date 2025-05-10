@@ -1,0 +1,36 @@
+section {
+    display: grid;
+    justify-content: center;
+}
+
+section * {
+    border: 1px black solid;
+}
+
+section > search > div {
+    display: inline-block;
+    width: auto;
+    height: auto;
+}
+
+section > search > div > form {
+    justify-self: center;
+    width: auto;
+    height: auto;
+}
+
+section > search > div > form > input[type="search"] {
+    width: 55%;
+    padding: 0%;
+    margin: 0%;
+}
+
+section > search > div > form > select {
+    width: 20%;
+}
+
+section > search > div > form > input[type="submit"] {
+    width: 20%;
+    padding: 0%;
+    background-color: burlywood;
+}

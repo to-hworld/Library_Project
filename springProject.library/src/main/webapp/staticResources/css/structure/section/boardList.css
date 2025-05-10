@@ -1,0 +1,31 @@
+section {
+    border: 1px black solid;
+}
+
+section * {
+    border: 1px black solid;
+}
+
+#section1 > table {
+    border-collapse: collapse;
+    display: block;
+    justify-self: center;
+}
+
+#section2 {
+    margin-top: 1%;
+}
+
+#section2 * {
+    display: inline;
+    padding: 0%;
+    text-decoration: none
+}
+#section2 > div {
+    display: block;
+    justify-self: center;
+}
+#section2 > div > nav > menu {
+    margin: 0%;
+    list-style: none;
+}

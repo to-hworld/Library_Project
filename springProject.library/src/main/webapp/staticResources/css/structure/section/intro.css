@@ -1,0 +1,20 @@
+section {
+    border: 1px black solid;
+}
+section * {
+    border: 1px black solid;
+}
+section > table {
+    border-collapse: collapse;
+}
+section > nav > menu {
+    list-style-type: none;
+    padding: 0%;
+}
+section > nav > menu > li {
+    display: inline-block;
+}
+
+section > table, section > nav {
+    justify-self: center;
+}

@@ -1,0 +1,41 @@
+section {
+    border: 1px black solid;
+    display: grid;
+    justify-content: center;
+}
+
+section * {
+    border: 1px black solid;
+}
+
+section > div {
+    display: inline-block;
+    width: 400px;
+    height: 400px;
+}
+
+section > div > form {
+    margin-top: 30%;
+    justify-self: center;
+    width: auto;
+    height: auto;
+}
+
+section > div > form > label {
+    display: block;
+    margin-bottom: 5%;
+}
+
+section > div > form > label > span {
+    width: 30%;
+    display: inline-block;
+}
+
+section > div > form > input[type="submit"] {
+    background-color: burlywood;
+    justify-self: center;
+    align-self: center;
+    display: grid;
+    font-size: 1em;
+    width: 50%;
+}
