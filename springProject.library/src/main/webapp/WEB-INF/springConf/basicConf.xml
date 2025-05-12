@@ -12,6 +12,11 @@
 
 	<context:component-scan base-package="forScan.*" />
 	
+	<beans:bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<beans:property name="prefix" value="/WEB-INF/views/" />
+		<beans:property name="suffix" value=".jsp" />
+	</beans:bean>
+	
 	<annotation-driven>
 		<message-converters>
 			<beans:bean class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">
@@ -25,5 +30,6 @@
 		<beans:property name="simpleDateFormat" value="yyyy-MM-dd" />
 		<beans:property name="modulesToInstall" value="com.fasterxml.jackson.module.paramnames.ParameterNamesModule" />
 	</beans:bean>
+	
 	
 </beans:beans>

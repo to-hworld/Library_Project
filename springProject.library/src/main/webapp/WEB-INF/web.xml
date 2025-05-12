@@ -9,7 +9,7 @@
 		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
 		<init-param>
 			<param-name>contextConfigLocation</param-name>
-			<param-value>/WEB-INF/springConf/basicConf.xml,/WEB-INF/springConf/beanConf.xml</param-value>
+			<param-value>/WEB-INF/springConf/basicConf.xml,/WEB-INF/springConf/beanConf.xml,/WEB-INF/springConf/dataSourceConf.xml</param-value>
 		</init-param>
 		<load-on-startup>1</load-on-startup>
 	</servlet>
@@ -28,5 +28,9 @@
 		<filter-name>httpCache</filter-name>
 		<url-pattern>/*</url-pattern>
 	</filter-mapping>
+	
+	<listener>
+    	<listener-class>listener.MysqlLeak</listener-class>
+	</listener>
 
 </web-app>

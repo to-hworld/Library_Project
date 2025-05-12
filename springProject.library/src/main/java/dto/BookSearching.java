@@ -1,5 +1,6 @@
 package dto;
 
+import java.net.URL;
 import java.util.Objects;
 
 public class BookSearching {
@@ -59,5 +60,10 @@ public class BookSearching {
 				&& Objects.equals(search_library, other.search_library);
 	}
 	
+	public static void main(String[] args) {
+		URL url = BookSearching.class.getClassLoader().getResource("mybatisConf/conf.xml");
+		System.out.println("Resource URL: " + url);
+
+	}
 	
 }

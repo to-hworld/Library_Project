@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:beans="http://www.springframework.org/schema/beans"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/tx https://www.springframework.org/schema/tx/spring-tx.xsd
+		http://www.springframework.org/schema/aop https://www.springframework.org/schema/aop/spring-aop.xsd">
+		
+		
+	<beans:bean id="mysqlPrivate" class="mysqlPrivate.GetPrivate" />
+	
+	<!-- hikaricp config -->
+	<beans:bean id="dataSource" class="com.zaxxer.hikari.HikariDataSource" destroy-method="close">
+        <beans:property name="driverClassName" value="#{ mysqlPrivate.driverClassName }" />
+        <beans:property name="jdbcUrl" value="#{ mysqlPrivate.jdbcUrl }" />
+        <beans:property name="username" value="#{ mysqlPrivate.username }" />
+        <beans:property name="password" value="#{ mysqlPrivate.password }" />
+        <beans:property name="maximumPoolSize" value="3" />
+        <beans:property name="connectionTimeout" value="3000" />
+        <beans:property name="leakDetectionThreshold" value="5000" />
+        <beans:property name="idleTimeout" value="3000" />
+        <beans:property name="maxLifetime" value="3000" />
+    </beans:bean>
+    
+    <!-- mybatis config -->
+    <beans:bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<beans:property name="dataSource" ref="dataSource" />
+		<beans:property name="configLocation" value="classpath:mybatisConf/conf.xml" />
+		<beans:property name="mapperLocations" value="classpath*:mybatisConf/mapper/*.xml" />
+	</beans:bean>
+	
+	<beans:bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate">
+		<beans:constructor-arg index="0" ref="sqlSessionFactory" />
+	</beans:bean>
+	
+	<!-- spring config -->
+	<beans:bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<beans:constructor-arg ref="dataSource" />
+	</beans:bean>
+	
+	<tx:annotation-driven transaction-manager="transactionManager"/>
+	
+	<aop:aspectj-autoproxy></aop:aspectj-autoproxy>
+</beans:beans>

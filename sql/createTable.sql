@@ -38,7 +38,8 @@ create table LIBRARY(
     CONSTRAINT LIBRARY_CLOSED_CHECK CHECK (REGEXP_LIKE(CLOSED,'^[^[:punct:][:space:]]+$')),
     CONSTRAINT LIBRARY_CON_NUMBER_CHECK CHECK (LENGTH(CON_NUMBER) <= 11)
 );
-
+select * from LIBRARY;
+delete from library where LIB_NAME='yylibrary';
 -- 소장 도서
 create table LIBRARY_BOOK(
     ISBN INT(15) PRIMARY KEY,

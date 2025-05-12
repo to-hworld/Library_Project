@@ -33,4 +33,4 @@ springProject.library-imp/target
 .classpath
 .project
 springProject.library/.gitignore
-springProject.library/src/main/webapp/WEB-INF/springConf/dataSourceConf.xml
+springProject.library/src/main/resources/properties/mysqlPrivate.properties
