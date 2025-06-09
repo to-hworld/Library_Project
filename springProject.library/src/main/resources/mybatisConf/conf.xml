@@ -5,6 +5,6 @@
 
 <configuration>
 	<typeAliases>
-		<typeAlias type="dto.Library" alias="library" />
+		<typeAlias type="forTest.dto.TestDto" alias="testDto" />
 	</typeAliases>
 </configuration>

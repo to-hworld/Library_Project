@@ -2,13 +2,13 @@
 <beans:beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns:beans="http://www.springframework.org/schema/beans"
 	xmlns:tx="http://www.springframework.org/schema/tx"
-	xmlns:aop="http://www.springframework.org/schema/aop"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
-		http://www.springframework.org/schema/tx https://www.springframework.org/schema/tx/spring-tx.xsd
-		http://www.springframework.org/schema/aop https://www.springframework.org/schema/aop/spring-aop.xsd">
+		http://www.springframework.org/schema/tx https://www.springframework.org/schema/tx/spring-tx.xsd">
 		
-		
+	
+	
 	<beans:bean id="mysqlPrivate" class="mysqlPrivate.GetPrivate" />
+	
 	
 	<!-- hikaricp config -->
 	<beans:bean id="dataSource" class="com.zaxxer.hikari.HikariDataSource" destroy-method="close">
@@ -23,6 +23,7 @@
         <beans:property name="maxLifetime" value="3000" />
     </beans:bean>
     
+    
     <!-- mybatis config -->
     <beans:bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<beans:property name="dataSource" ref="dataSource" />
@@ -34,12 +35,13 @@
 		<beans:constructor-arg index="0" ref="sqlSessionFactory" />
 	</beans:bean>
 	
-	<!-- spring config -->
+	
+	<!-- transaction annotation config -->
 	<beans:bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
 		<beans:constructor-arg ref="dataSource" />
 	</beans:bean>
 	
 	<tx:annotation-driven transaction-manager="transactionManager"/>
 	
-	<aop:aspectj-autoproxy></aop:aspectj-autoproxy>
+	
 </beans:beans>

@@ -3,20 +3,30 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns:beans="http://www.springframework.org/schema/beans"
 	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop"
 	xsi:schemaLocation="http://www.springframework.org/schema/mvc https://www.springframework.org/schema/mvc/spring-mvc.xsd
 		http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
-		http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
+		http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd
+		http://www.springframework.org/schema/aop https://www.springframework.org/schema/aop/spring-aop.xsd">
 
-
+	
+	<!-- static resource url mapping -->
 	<resources mapping="/rs/**" location="/staticResources/"/> 
 
-	<context:component-scan base-package="forScan.*" />
+
+	<!-- scan for context bean -->
+	<!-- <context:component-scan base-package="forScan.*" /> -->
+	<context:component-scan base-package="forTest.*" />
 	
+	
+	<!-- jsp returned from controller -->
 	<beans:bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<beans:property name="prefix" value="/WEB-INF/views/" />
 		<beans:property name="suffix" value=".jsp" />
 	</beans:bean>
 	
+	
+	<!-- json converter config -->
 	<annotation-driven>
 		<message-converters>
 			<beans:bean class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">
@@ -30,6 +40,10 @@
 		<beans:property name="simpleDateFormat" value="yyyy-MM-dd" />
 		<beans:property name="modulesToInstall" value="com.fasterxml.jackson.module.paramnames.ParameterNamesModule" />
 	</beans:bean>
+	
+	
+	<!-- aop config -->
+	<aop:aspectj-autoproxy></aop:aspectj-autoproxy>
 	
 	
 </beans:beans>

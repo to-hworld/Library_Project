@@ -10,7 +10,8 @@ import jakarta.servlet.ServletContextEvent;
 import jakarta.servlet.ServletContextListener;
 
 public class MysqlLeak implements ServletContextListener{
-// refactoring 필요
+// refactoring 필요. tomcat 종료시 메모리 누수로 인함.
+// because of AbandonedConnectionCleanupThread 스레드가 종료되지 않음.  jdbc driver가 deregister 되지 않음.
 	@Override
 	public void contextDestroyed(ServletContextEvent sce) {
 		

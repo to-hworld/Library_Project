@@ -19,7 +19,7 @@
 		<url-pattern>/</url-pattern>
 	</servlet-mapping>
 	
-	
+	<!--브라우저의 cache에 저장된 것이 refresh되게 하기 위함 -->
 	<filter>
 		<filter-name>httpCache</filter-name>
 		<filter-class>filter.HttpCache</filter-class>
@@ -29,6 +29,7 @@
 		<url-pattern>/*</url-pattern>
 	</filter-mapping>
 	
+	<!-- tomcat shutdown시, resource 회수 되지 않는 문제 -->
 	<listener>
     	<listener-class>listener.MysqlLeak</listener-class>
 	</listener>

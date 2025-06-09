@@ -18,15 +18,16 @@ public class GetPrivate {
 	public GetPrivate() throws FileNotFoundException,IOException {
 		
 //		classpath로부터 읽기 위함
-		InputStream is = GetPrivate.class.getClassLoader().getResourceAsStream("properties/mysqlPrivate.properties");
+		InputStream is = GetPrivate.class.getClassLoader().getResourceAsStream("properties/datasourcePrivate/mysqlPrivate.properties");
 		Reader r=new InputStreamReader(is);
-//		Reader r = new FileReader("src/main/resources/properties/mysqlPrivate.properties");
+//		Reader r = new FileReader("src/main/resources/properties/datasourcePrivate/mysqlPrivate.properties");
 		Properties p=new Properties();
 		p.load(r);
 		driverClassName=p.getProperty("driverClassName");
 		jdbcUrl=p.getProperty("jdbcUrl");
 		username=p.getProperty("username");
 		password=p.getProperty("password");
+		is.close();
 		
 	}
 

@@ -28,9 +28,9 @@ replay_pid*
 Servers
 .settings
 springProject.library-imp/target
+springProject.library/src/main/resources/properties/datasourcePrivate
 
 # file
 .classpath
 .project
 springProject.library/.gitignore
-springProject.library/src/main/resources/properties/mysqlPrivate.properties
